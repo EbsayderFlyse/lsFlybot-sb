@@ -1,15 +1,9 @@
-const Discord = require("discord.js");
+const Discord = require('discord.js');
 const client = new Discord.Client();
-require("dotenv").config();
+const token = ‘OTc1MTYzMjkxNTczODEzMjY5.GUsI8k.0B1cLGvUYeYDODBBaUfrGdP92V6Hm3BxhXoIeE’
 
-client.on("ready", () => {
-    console.log("I'm ready !");
+client.once('ready', () => {
+   console.log(‘Félicitations, votre bot Discord a été correctement initialisé !');
 });
 
-client.on("message", msg => {
-    if (msg.content === "ping") {
-        msg.reply("pong");
-    }
-});
-
-client.login(process.env.BOT_TOKEN);
+client.login(token);
